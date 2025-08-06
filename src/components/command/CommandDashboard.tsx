@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -10,7 +9,7 @@ import {
   Users, 
   MapPin, 
   Camera, 
-  Drone, 
+  Plane, 
   MessageCircle,
   Activity,
   Shield,
@@ -185,7 +184,7 @@ const CommandDashboard: React.FC<CommandDashboardProps> = ({ user, onLogout }) =
                     {droneUnits.filter(d => d.status === 'active').length}
                   </p>
                 </div>
-                <Drone className="h-8 w-8 text-green-600" />
+                <Plane className="h-8 w-8 text-green-600" />
               </div>
             </CardContent>
           </Card>
@@ -337,7 +336,7 @@ const CommandDashboard: React.FC<CommandDashboardProps> = ({ user, onLogout }) =
                   <CardHeader className="pb-2">
                     <CardTitle className="text-lg flex items-center justify-between">
                       <span className="flex items-center gap-2">
-                        <Drone className="h-5 w-5" />
+                        <Plane className="h-5 w-5" />
                         {drone.id}
                       </span>
                       <Badge className={getDroneStatusColor(drone.status) + ' text-white'}>
